@@ -12877,18 +12877,15 @@ namespace SwachhBharat.API.Bll.Repository.Repository
                     }
                     else if (atten != null)
                     {
-                        if (AppId <= 4000 && AppId != 3098)  // This Condition Only For Old App Only
-                        {
-                            obj.IsIn = true;
-                            appdetails.IsAreaActive = true;
-                        }
-                        else
-                        {
+                       
                             coordinates p = new coordinates()
                             {
                                 lat = Convert.ToDouble(obj.Lat),
                                 lng = Convert.ToDouble(obj.Long)
                             };
+                        obj.IsIn = false;
+                        if (appdetails.AppAreaLatLong!=null)
+                        { 
                             List<List<coordinates>> lstPoly = new List<List<coordinates>>();
                             List<coordinates> poly = new List<coordinates>();
                             AppAreaMapVM ebm = GetEmpBeatMapByUserId(AppId);
@@ -13382,30 +13379,28 @@ namespace SwachhBharat.API.Bll.Repository.Repository
 
                     foreach (var item in obj)
                     {
-                        if (AppId <= 4000 && AppId != 3098)  // This Condition Only For Old App Only
-                        {
-                            item.IsIn = true;
-                            appdetails.IsAreaActive = true;
-                        }
-                        else
-                        {
+                       
                             coordinates p = new coordinates()
                             {
                                 lat = Convert.ToDouble(item.Lat),
                                 lng = Convert.ToDouble(item.Long)
                             };
-                            List<List<coordinates>> lstPoly = new List<List<coordinates>>();
-                            List<coordinates> poly = new List<coordinates>();
-                            AppAreaMapVM ebm = GetEmpBeatMapByUserId(AppId);
-                            lstPoly = ebm.AppAreaLatLong;
-                            int polyId = 0;
-                            if (lstPoly != null && lstPoly.Count > polyId)
+                        item.IsIn = false;
+                        if (appdetails.AppAreaLatLong != null)
                             {
-                                poly = lstPoly[polyId];
-                            }
-                            item.IsIn = IsPointInPolygon(poly, p);
-                        }
+                                List<List<coordinates>> lstPoly = new List<List<coordinates>>();
+                                List<coordinates> poly = new List<coordinates>();
+                                AppAreaMapVM ebm = GetEmpBeatMapByUserId(AppId);
+                                lstPoly = ebm.AppAreaLatLong;
+                                int polyId = 0;
+                                if (lstPoly != null && lstPoly.Count > polyId)
+                                {
+                                    poly = lstPoly[polyId];
+                                }
 
+                                item.IsIn = IsPointInPolygon(poly, p);
+                            }
+                   
 
 
                         if ((item.IsIn == true && appdetails.IsAreaActive == true) || appdetails.IsAreaActive == false)
