@@ -13382,7 +13382,7 @@ namespace SwachhBharat.API.Bll.Repository.Repository
                        
                             coordinates p = new coordinates()
                             {
-                                lat = Convert.ToDouble(item.Lat),
+                                lat = Convert.ToDouble(item.Lat), 
                                 lng = Convert.ToDouble(item.Long)
                             };
                         item.IsIn = false;
