@@ -8603,7 +8603,10 @@ namespace SwachhBharat.API.Bll.Repository.Repository
         public CollectionSyncResult SaveGarbageCollectionOffline(SBGarbageCollectionView obj, int AppId, int type)
         {
             CollectionSyncResult result = new CollectionSyncResult();
-            var appdetails = dbMain.AppDetails.Where(c => c.AppId == AppId).FirstOrDefault();
+           // var appdetails = dbMain.AppDetails.Where(c => c.AppId == AppId).FirstOrDefault();
+            DevSwachhBharatMainEntities dbMain2 = new DevSwachhBharatMainEntities();
+            var appdetails = dbMain2.AppDetails.Where(c => c.AppId == AppId).FirstOrDefault();
+
             DevSwachhBharatNagpurEntities db = new DevSwachhBharatNagpurEntities(AppId);
 
             string House_Lat = obj.Lat;
