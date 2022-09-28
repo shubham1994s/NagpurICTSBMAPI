@@ -87,5 +87,6 @@ namespace SwachhBharatAPI.Dal.DataContexts
         public Nullable<int> Total_StreetCount { get; set; }
         public Nullable<int> Today_DumpScanCount { get; set; }
         public Nullable<int> Total_DumpCount { get; set; }
+        public string AppLink { get; set; }
     }
 }

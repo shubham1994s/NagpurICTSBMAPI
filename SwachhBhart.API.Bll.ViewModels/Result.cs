@@ -16,6 +16,8 @@ namespace SwachhBhart.API.Bll.ViewModels
         public bool isAttendenceOff { get; set; }
 
         public string emptype { get; set; }
+
+        public string applink { get; set; }
     }
 
     public class Result1

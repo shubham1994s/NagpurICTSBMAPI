@@ -12,12 +12,9 @@ namespace SwachhBharatAPI.Dal.DataContexts
     using System;
     using System.Collections.Generic;
     
-    public partial class Game_AnswerType
+    public partial class Subscription
     {
-        public int AnswerTypeId { get; set; }
-        public string AnswerType { get; set; }
-        public string AnswerTypeMar { get; set; }
-        public string AnswerTypeHindi { get; set; }
-        public Nullable<int> GameMasterID { get; set; }
+        public int subscriptionId { get; set; }
+        public string subscriptionName { get; set; }
     }
 }
