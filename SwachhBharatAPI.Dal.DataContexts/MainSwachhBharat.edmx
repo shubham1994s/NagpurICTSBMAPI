@@ -552,6 +552,65 @@ warning 6002: The table/view 'LIVEAdvanceDevSwachhBharatMain.dbo.CheckAppD' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="All_Schedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="All_SP_GetEmpWiseHouseScan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DailyScanCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Ulbappid" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="HouseEntryCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Admin_table" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Admin2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Admin3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Admin5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_area" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_DistanceCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="sLat" Type="float" Mode="In" />
+          <Parameter Name="sLong" Type="float" Mode="In" />
+          <Parameter Name="dLat" Type="float" Mode="In" />
+          <Parameter Name="dLong" Type="float" Mode="In" />
+        </Function>
+        <Function Name="SP_SSRS_GarbageCollection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="appId" Type="int" Mode="In" />
+          <Parameter Name="fdate" Type="datetime" Mode="In" />
+          <Parameter Name="tdate" Type="datetime" Mode="In" />
+          <Parameter Name="userId" Type="int" Mode="In" />
+          <Parameter Name="garbageType" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_SSRS_GarbageCollection1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="appId" Type="int" Mode="In" />
+          <Parameter Name="fdate" Type="datetime" Mode="In" />
+          <Parameter Name="tdate" Type="datetime" Mode="In" />
+          <Parameter Name="userId" Type="int" Mode="In" />
+          <Parameter Name="garbageType" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_ULBADMIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DivisionIdIn" Type="int" Mode="In" />
+          <Parameter Name="DistrictIdIn" Type="int" Mode="In" />
+          <Parameter Name="AppIdIN" Type="int" Mode="In" />
+          <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_ULBADMINMAP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DivisionIdIn" Type="int" Mode="In" />
+          <Parameter Name="DistrictIdIn" Type="int" Mode="In" />
+          <Parameter Name="AppIdIN" Type="int" Mode="In" />
+          <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_ULBADMINSTATUS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DivisionIdIn" Type="int" Mode="In" />
+          <Parameter Name="DistrictIdIn" Type="int" Mode="In" />
+          <Parameter Name="AppIdIN" Type="int" Mode="In" />
+          <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_UserLatLongDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="userid" Type="int" Mode="In" />
+          <Parameter Name="typeId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_UserLatLongDetailMain" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="userid" Type="int" Mode="In" />
+          <Parameter Name="typeId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spNewProcedure1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Update_Trigger" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DevSwachhBharatMainModelStoreContainer">
           <EntitySet Name="AD_USER_MST_LIQUID" EntityType="Self.AD_USER_MST_LIQUID" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AD_USER_MST_SA" EntityType="Self.AD_USER_MST_SA" Schema="dbo" store:Type="Tables" />
@@ -678,6 +737,65 @@ warning 6002: The table/view 'LIVEAdvanceDevSwachhBharatMain.dbo.CheckAppD' does
             <End Role="AspNetRole" EntitySet="AspNetRoles" />
             <End Role="AspNetUser" EntitySet="AspNetUsers" />
           </AssociationSet>
+          <FunctionImport Name="All_Schedule" />
+          <FunctionImport Name="All_SP_GetEmpWiseHouseScan" />
+          <FunctionImport Name="DailyScanCount1" ReturnType="Collection(Int32)">
+            <Parameter Name="Ulbappid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="HouseEntryCount" />
+          <FunctionImport Name="SP_Admin_table" />
+          <FunctionImport Name="SP_Admin2" />
+          <FunctionImport Name="SP_Admin3" />
+          <FunctionImport Name="SP_Admin5" />
+          <FunctionImport Name="sp_area" />
+          <FunctionImport Name="SP_DistanceCount1" ReturnType="Collection(DevSwachhBharatMainModel.SP_DistanceCount1_Result)">
+            <Parameter Name="sLat" Mode="In" Type="Double" />
+            <Parameter Name="sLong" Mode="In" Type="Double" />
+            <Parameter Name="dLat" Mode="In" Type="Double" />
+            <Parameter Name="dLong" Mode="In" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SSRS_GarbageCollection">
+            <Parameter Name="appId" Mode="In" Type="Int32" />
+            <Parameter Name="fdate" Mode="In" Type="DateTime" />
+            <Parameter Name="tdate" Mode="In" Type="DateTime" />
+            <Parameter Name="userId" Mode="In" Type="Int32" />
+            <Parameter Name="garbageType" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SSRS_GarbageCollection1">
+            <Parameter Name="appId" Mode="In" Type="Int32" />
+            <Parameter Name="fdate" Mode="In" Type="DateTime" />
+            <Parameter Name="tdate" Mode="In" Type="DateTime" />
+            <Parameter Name="userId" Mode="In" Type="Int32" />
+            <Parameter Name="garbageType" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_ULBADMIN" ReturnType="Collection(DevSwachhBharatMainModel.SP_ULBADMIN_Result)">
+            <Parameter Name="DivisionIdIn" Mode="In" Type="Int32" />
+            <Parameter Name="DistrictIdIn" Mode="In" Type="Int32" />
+            <Parameter Name="AppIdIN" Mode="In" Type="Int32" />
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_ULBADMINMAP" ReturnType="Collection(DevSwachhBharatMainModel.SP_ULBADMINMAP_Result)">
+            <Parameter Name="DivisionIdIn" Mode="In" Type="Int32" />
+            <Parameter Name="DistrictIdIn" Mode="In" Type="Int32" />
+            <Parameter Name="AppIdIN" Mode="In" Type="Int32" />
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_ULBADMINSTATUS" ReturnType="Collection(DevSwachhBharatMainModel.SP_ULBADMINSTATUS_Result)">
+            <Parameter Name="DivisionIdIn" Mode="In" Type="Int32" />
+            <Parameter Name="DistrictIdIn" Mode="In" Type="Int32" />
+            <Parameter Name="AppIdIN" Mode="In" Type="Int32" />
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_UserLatLongDetail1" ReturnType="Collection(DevSwachhBharatMainModel.SP_UserLatLongDetail1_Result)">
+            <Parameter Name="userid" Mode="In" Type="Int32" />
+            <Parameter Name="typeId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_UserLatLongDetailMain1" ReturnType="Collection(DevSwachhBharatMainModel.SP_UserLatLongDetailMain1_Result)">
+            <Parameter Name="userid" Mode="In" Type="Int32" />
+            <Parameter Name="typeId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spNewProcedure1" />
+          <FunctionImport Name="Update_Trigger1" ReturnType="Collection(DevSwachhBharatMainModel.Update_Trigger1_Result)" />
           </EntityContainer>
         <ComplexType Name="Update_Trigger_Result">
           <Property Type="Int32" Name="AppId" Nullable="false" />
@@ -1290,6 +1408,144 @@ warning 6002: The table/view 'LIVEAdvanceDevSwachhBharatMain.dbo.CheckAppD' does
           <End Type="DevSwachhBharatMainModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
           <End Type="DevSwachhBharatMainModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
         </Association>
+        <ComplexType Name="SP_DistanceCount1_Result">
+          <Property Type="Decimal" Name="Distance_in_KM" Nullable="true" Precision="10" Scale="4" />
+          <Property Type="Decimal" Name="Distance_in_meters" Nullable="true" Precision="10" Scale="4" />
+        </ComplexType>
+        <ComplexType Name="SP_ULBADMIN_Result">
+          <Property Type="String" Name="ParentULB" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="ULBName" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="ULBId" Nullable="true" />
+          <Property Type="Int32" Name="TotalHouse" Nullable="true" />
+          <Property Type="Int32" Name="TotalHouseScan" Nullable="true" />
+          <Property Type="Int32" Name="TotalSeg" Nullable="true" />
+          <Property Type="Int32" Name="TotalMix" Nullable="true" />
+          <Property Type="Int32" Name="TotalNotReceived" Nullable="true" />
+          <Property Type="Int32" Name="ULBCount" Nullable="true" />
+          <Property Type="Int32" Name="TotalActiveEmp" Nullable="true" />
+          <Property Type="Int32" Name="TotalOnDutyEmp" Nullable="true" />
+          <Property Type="Int32" Name="TotalOffDutyEmp" Nullable="true" />
+          <Property Type="Int32" Name="InprogressULB" Nullable="true" />
+          <Property Type="Int32" Name="CompleteULB" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_ULBADMINMAP_Result">
+          <Property Type="String" Name="ParentULB" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="ULBName" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="ULBId" Nullable="true" />
+          <Property Type="Int32" Name="TotalHouse" Nullable="true" />
+          <Property Type="Int32" Name="TotalHouseScan" Nullable="true" />
+          <Property Type="Int32" Name="TotalLiquid" Nullable="true" />
+          <Property Type="Int32" Name="TotalLiquidScan" Nullable="true" />
+          <Property Type="Int32" Name="TotalStreet" Nullable="true" />
+          <Property Type="Int32" Name="TotalStreetScan" Nullable="true" />
+          <Property Type="Int32" Name="TotalDump" Nullable="true" />
+          <Property Type="Int32" Name="TotalDumpScan" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_ULBADMINSTATUS_Result">
+          <Property Type="Int32" Name="AppId" Nullable="false" />
+          <Property Type="String" Name="appName" Nullable="true" MaxLength="100" />
+          <Property Type="Boolean" Name="Status" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_UserLatLongDetail1_Result">
+          <Property Type="Int32" Name="locId" Nullable="false" />
+          <Property Type="Int32" Name="empId" Nullable="true" />
+          <Property Type="DateTime" Name="datetime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="lat" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="long" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="address" Nullable="true" />
+          <Property Type="String" Name="area" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="type" Nullable="true" />
+          <Property Type="String" Name="batteryStatus" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Distnace" Nullable="true" Precision="6" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="SP_UserLatLongDetailMain1_Result">
+          <Property Type="Int32" Name="locId" Nullable="false" />
+          <Property Type="Int32" Name="empId" Nullable="true" />
+          <Property Type="DateTime" Name="datetime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="lat" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="long" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="address" Nullable="true" />
+          <Property Type="String" Name="area" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="type" Nullable="true" />
+          <Property Type="String" Name="batteryStatus" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Distnace" Nullable="true" Precision="6" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="Update_Trigger1_Result">
+          <Property Type="Int32" Name="AppId" Nullable="false" />
+          <Property Type="String" Name="AppName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="AppName_mar" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="State" Nullable="true" />
+          <Property Type="Int32" Name="Tehsil" Nullable="true" />
+          <Property Type="Int32" Name="District" Nullable="true" />
+          <Property Type="String" Name="EmailId" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="website" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Android_GCM_pushNotification_Key" Nullable="true" MaxLength="150" />
+          <Property Type="Boolean" Name="IsProduction" Nullable="true" />
+          <Property Type="String" Name="baseImageUrlCMS" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="baseImageUrl" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="AboutThumbnailURL" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="AboutAppynity" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="AboutTeamDetail" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ContactUsTeamMember" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="HomeSplash" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FAQ" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ContactUs" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="basePath" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="yoccContact" Nullable="true" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Logo" Nullable="true" />
+          <Property Type="String" Name="Latitude" Nullable="true" />
+          <Property Type="String" Name="Logitude" Nullable="true" />
+          <Property Type="String" Name="UserProfile" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Collection" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="HouseQRCode" Nullable="true" MaxLength="220" />
+          <Property Type="String" Name="PointQRCode" Nullable="true" MaxLength="220" />
+          <Property Type="String" Name="HousePDF" Nullable="true" MaxLength="550" />
+          <Property Type="String" Name="PointPDF" Nullable="true" MaxLength="550" />
+          <Property Type="String" Name="Grampanchayat_Pro" Nullable="true" />
+          <Property Type="String" Name="AppVersion" Nullable="true" MaxLength="500" />
+          <Property Type="Boolean" Name="ForceUpdate" Nullable="true" />
+          <Property Type="Int32" Name="APIHit" Nullable="true" />
+          <Property Type="Boolean" Name="NewFeatures" Nullable="true" />
+          <Property Type="Boolean" Name="ReportEnable" Nullable="true" />
+          <Property Type="String" Name="DumpYardQRCode" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="DumpYardPDF" Nullable="true" MaxLength="250" />
+          <Property Type="Int32" Name="GramPanchyatAppID" Nullable="true" />
+          <Property Type="Int32" Name="YoccClientID" Nullable="true" />
+          <Property Type="String" Name="YoccFeddbackLink" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="YoccDndLink" Nullable="true" MaxLength="250" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="Int32" Name="LanguageId" Nullable="true" />
+          <Property Type="String" Name="MsgForBroadcast" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="MsgForNotSpecified" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="MsgForMixed" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="MsgForNotReceived" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="MsgForSegregated" Nullable="true" MaxLength="1000" />
+          <Property Type="Boolean" Name="IsScanNear" Nullable="true" />
+          <Property Type="String" Name="LiquidQRCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="StreetQRCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="CommercialQRCode" Nullable="true" MaxLength="220" />
+          <Property Type="String" Name="CTPTQRCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="SWMQRCode" Nullable="true" MaxLength="100" />
+          <Property Type="Boolean" Name="Today_Waste_Status" Nullable="true" />
+          <Property Type="Boolean" Name="Today_Liquid_Status" Nullable="true" />
+          <Property Type="Boolean" Name="Today_Street_Status" Nullable="true" />
+          <Property Type="Int32" Name="ulb_property" Nullable="true" />
+          <Property Type="Int32" Name="Add_Ulb_Property" Nullable="true" />
+          <Property Type="Boolean" Name="Status" Nullable="true" />
+          <Property Type="String" Name="VehicalQRCode" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="AppAreaLatLong" Nullable="true" />
+          <Property Type="Boolean" Name="IsAreaActive" Nullable="true" />
+          <Property Type="Int32" Name="Today_HouseScanCount" Nullable="true" />
+          <Property Type="Int32" Name="Today_LiquidScanCount" Nullable="true" />
+          <Property Type="Int32" Name="Today_StreetScanCount" Nullable="true" />
+          <Property Type="Int32" Name="Total_HouseCount" Nullable="true" />
+          <Property Type="Int32" Name="Total_LiquidCount" Nullable="true" />
+          <Property Type="Int32" Name="Total_StreetCount" Nullable="true" />
+          <Property Type="Int32" Name="Today_DumpScanCount" Nullable="true" />
+          <Property Type="Int32" Name="Total_DumpCount" Nullable="true" />
+          <Property Type="String" Name="AppLink" Nullable="true" MaxLength="500" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1814,6 +2070,184 @@ warning 6002: The table/view 'LIVEAdvanceDevSwachhBharatMain.dbo.CheckAppD' does
               <ScalarProperty Name="Id" ColumnName="RoleId" />
             </EndProperty>
           </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="All_Schedule" FunctionName="DevSwachhBharatMainModel.Store.All_Schedule" />
+          <FunctionImportMapping FunctionImportName="All_SP_GetEmpWiseHouseScan" FunctionName="DevSwachhBharatMainModel.Store.All_SP_GetEmpWiseHouseScan" />
+          <FunctionImportMapping FunctionImportName="DailyScanCount1" FunctionName="DevSwachhBharatMainModel.Store.DailyScanCount" />
+          <FunctionImportMapping FunctionImportName="HouseEntryCount" FunctionName="DevSwachhBharatMainModel.Store.HouseEntryCount" />
+          <FunctionImportMapping FunctionImportName="SP_Admin_table" FunctionName="DevSwachhBharatMainModel.Store.SP_Admin_table" />
+          <FunctionImportMapping FunctionImportName="SP_Admin2" FunctionName="DevSwachhBharatMainModel.Store.SP_Admin2" />
+          <FunctionImportMapping FunctionImportName="SP_Admin3" FunctionName="DevSwachhBharatMainModel.Store.SP_Admin3" />
+          <FunctionImportMapping FunctionImportName="SP_Admin5" FunctionName="DevSwachhBharatMainModel.Store.SP_Admin5" />
+          <FunctionImportMapping FunctionImportName="sp_area" FunctionName="DevSwachhBharatMainModel.Store.sp_area" />
+          <FunctionImportMapping FunctionImportName="SP_DistanceCount1" FunctionName="DevSwachhBharatMainModel.Store.SP_DistanceCount">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DevSwachhBharatMainModel.SP_DistanceCount1_Result">
+                <ScalarProperty Name="Distance_in_KM" ColumnName="Distance_in_KM" />
+                <ScalarProperty Name="Distance_in_meters" ColumnName="Distance_in_meters" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_SSRS_GarbageCollection" FunctionName="DevSwachhBharatMainModel.Store.SP_SSRS_GarbageCollection" />
+          <FunctionImportMapping FunctionImportName="SP_SSRS_GarbageCollection1" FunctionName="DevSwachhBharatMainModel.Store.SP_SSRS_GarbageCollection1" />
+          <FunctionImportMapping FunctionImportName="SP_ULBADMIN" FunctionName="DevSwachhBharatMainModel.Store.SP_ULBADMIN">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DevSwachhBharatMainModel.SP_ULBADMIN_Result">
+                <ScalarProperty Name="ParentULB" ColumnName="ParentULB" />
+                <ScalarProperty Name="ULBName" ColumnName="ULBName" />
+                <ScalarProperty Name="ULBId" ColumnName="ULBId" />
+                <ScalarProperty Name="TotalHouse" ColumnName="TotalHouse" />
+                <ScalarProperty Name="TotalHouseScan" ColumnName="TotalHouseScan" />
+                <ScalarProperty Name="TotalSeg" ColumnName="TotalSeg" />
+                <ScalarProperty Name="TotalMix" ColumnName="TotalMix" />
+                <ScalarProperty Name="TotalNotReceived" ColumnName="TotalNotReceived" />
+                <ScalarProperty Name="ULBCount" ColumnName="ULBCount" />
+                <ScalarProperty Name="TotalActiveEmp" ColumnName="TotalActiveEmp" />
+                <ScalarProperty Name="TotalOnDutyEmp" ColumnName="TotalOnDutyEmp" />
+                <ScalarProperty Name="TotalOffDutyEmp" ColumnName="TotalOffDutyEmp" />
+                <ScalarProperty Name="InprogressULB" ColumnName="InprogressULB" />
+                <ScalarProperty Name="CompleteULB" ColumnName="CompleteULB" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_ULBADMINMAP" FunctionName="DevSwachhBharatMainModel.Store.SP_ULBADMINMAP">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DevSwachhBharatMainModel.SP_ULBADMINMAP_Result">
+                <ScalarProperty Name="ParentULB" ColumnName="ParentULB" />
+                <ScalarProperty Name="ULBName" ColumnName="ULBName" />
+                <ScalarProperty Name="ULBId" ColumnName="ULBId" />
+                <ScalarProperty Name="TotalHouse" ColumnName="TotalHouse" />
+                <ScalarProperty Name="TotalHouseScan" ColumnName="TotalHouseScan" />
+                <ScalarProperty Name="TotalLiquid" ColumnName="TotalLiquid" />
+                <ScalarProperty Name="TotalLiquidScan" ColumnName="TotalLiquidScan" />
+                <ScalarProperty Name="TotalStreet" ColumnName="TotalStreet" />
+                <ScalarProperty Name="TotalStreetScan" ColumnName="TotalStreetScan" />
+                <ScalarProperty Name="TotalDump" ColumnName="TotalDump" />
+                <ScalarProperty Name="TotalDumpScan" ColumnName="TotalDumpScan" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_ULBADMINSTATUS" FunctionName="DevSwachhBharatMainModel.Store.SP_ULBADMINSTATUS">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DevSwachhBharatMainModel.SP_ULBADMINSTATUS_Result">
+                <ScalarProperty Name="AppId" ColumnName="AppId" />
+                <ScalarProperty Name="appName" ColumnName="appName" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_UserLatLongDetail1" FunctionName="DevSwachhBharatMainModel.Store.SP_UserLatLongDetail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DevSwachhBharatMainModel.SP_UserLatLongDetail1_Result">
+                <ScalarProperty Name="locId" ColumnName="locId" />
+                <ScalarProperty Name="empId" ColumnName="empId" />
+                <ScalarProperty Name="datetime" ColumnName="datetime" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="long" ColumnName="long" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="area" ColumnName="area" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="batteryStatus" ColumnName="batteryStatus" />
+                <ScalarProperty Name="Distnace" ColumnName="Distnace" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_UserLatLongDetailMain1" FunctionName="DevSwachhBharatMainModel.Store.SP_UserLatLongDetailMain">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DevSwachhBharatMainModel.SP_UserLatLongDetailMain1_Result">
+                <ScalarProperty Name="locId" ColumnName="locId" />
+                <ScalarProperty Name="empId" ColumnName="empId" />
+                <ScalarProperty Name="datetime" ColumnName="datetime" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="long" ColumnName="long" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="area" ColumnName="area" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="batteryStatus" ColumnName="batteryStatus" />
+                <ScalarProperty Name="Distnace" ColumnName="Distnace" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spNewProcedure1" FunctionName="DevSwachhBharatMainModel.Store.spNewProcedure1" />
+          <FunctionImportMapping FunctionImportName="Update_Trigger1" FunctionName="DevSwachhBharatMainModel.Store.Update_Trigger">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DevSwachhBharatMainModel.Update_Trigger1_Result">
+                <ScalarProperty Name="AppId" ColumnName="AppId" />
+                <ScalarProperty Name="AppName" ColumnName="AppName" />
+                <ScalarProperty Name="AppName_mar" ColumnName="AppName_mar" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Tehsil" ColumnName="Tehsil" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="website" ColumnName="website" />
+                <ScalarProperty Name="Android_GCM_pushNotification_Key" ColumnName="Android_GCM_pushNotification_Key" />
+                <ScalarProperty Name="IsProduction" ColumnName="IsProduction" />
+                <ScalarProperty Name="baseImageUrlCMS" ColumnName="baseImageUrlCMS" />
+                <ScalarProperty Name="baseImageUrl" ColumnName="baseImageUrl" />
+                <ScalarProperty Name="AboutThumbnailURL" ColumnName="AboutThumbnailURL" />
+                <ScalarProperty Name="AboutAppynity" ColumnName="AboutAppynity" />
+                <ScalarProperty Name="AboutTeamDetail" ColumnName="AboutTeamDetail" />
+                <ScalarProperty Name="ContactUsTeamMember" ColumnName="ContactUsTeamMember" />
+                <ScalarProperty Name="HomeSplash" ColumnName="HomeSplash" />
+                <ScalarProperty Name="FAQ" ColumnName="FAQ" />
+                <ScalarProperty Name="ContactUs" ColumnName="ContactUs" />
+                <ScalarProperty Name="basePath" ColumnName="basePath" />
+                <ScalarProperty Name="yoccContact" ColumnName="yoccContact" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Logitude" ColumnName="Logitude" />
+                <ScalarProperty Name="UserProfile" ColumnName="UserProfile" />
+                <ScalarProperty Name="Collection" ColumnName="Collection" />
+                <ScalarProperty Name="HouseQRCode" ColumnName="HouseQRCode" />
+                <ScalarProperty Name="PointQRCode" ColumnName="PointQRCode" />
+                <ScalarProperty Name="HousePDF" ColumnName="HousePDF" />
+                <ScalarProperty Name="PointPDF" ColumnName="PointPDF" />
+                <ScalarProperty Name="Grampanchayat_Pro" ColumnName="Grampanchayat_Pro" />
+                <ScalarProperty Name="AppVersion" ColumnName="AppVersion" />
+                <ScalarProperty Name="ForceUpdate" ColumnName="ForceUpdate" />
+                <ScalarProperty Name="APIHit" ColumnName="APIHit" />
+                <ScalarProperty Name="NewFeatures" ColumnName="NewFeatures" />
+                <ScalarProperty Name="ReportEnable" ColumnName="ReportEnable" />
+                <ScalarProperty Name="DumpYardQRCode" ColumnName="DumpYardQRCode" />
+                <ScalarProperty Name="DumpYardPDF" ColumnName="DumpYardPDF" />
+                <ScalarProperty Name="GramPanchyatAppID" ColumnName="GramPanchyatAppID" />
+                <ScalarProperty Name="YoccClientID" ColumnName="YoccClientID" />
+                <ScalarProperty Name="YoccFeddbackLink" ColumnName="YoccFeddbackLink" />
+                <ScalarProperty Name="YoccDndLink" ColumnName="YoccDndLink" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="MsgForBroadcast" ColumnName="MsgForBroadcast" />
+                <ScalarProperty Name="MsgForNotSpecified" ColumnName="MsgForNotSpecified" />
+                <ScalarProperty Name="MsgForMixed" ColumnName="MsgForMixed" />
+                <ScalarProperty Name="MsgForNotReceived" ColumnName="MsgForNotReceived" />
+                <ScalarProperty Name="MsgForSegregated" ColumnName="MsgForSegregated" />
+                <ScalarProperty Name="IsScanNear" ColumnName="IsScanNear" />
+                <ScalarProperty Name="LiquidQRCode" ColumnName="LiquidQRCode" />
+                <ScalarProperty Name="StreetQRCode" ColumnName="StreetQRCode" />
+                <ScalarProperty Name="CommercialQRCode" ColumnName="CommercialQRCode" />
+                <ScalarProperty Name="CTPTQRCode" ColumnName="CTPTQRCode" />
+                <ScalarProperty Name="SWMQRCode" ColumnName="SWMQRCode" />
+                <ScalarProperty Name="Today_Waste_Status" ColumnName="Today_Waste_Status" />
+                <ScalarProperty Name="Today_Liquid_Status" ColumnName="Today_Liquid_Status" />
+                <ScalarProperty Name="Today_Street_Status" ColumnName="Today_Street_Status" />
+                <ScalarProperty Name="ulb_property" ColumnName="ulb_property" />
+                <ScalarProperty Name="Add_Ulb_Property" ColumnName="Add_Ulb_Property" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="VehicalQRCode" ColumnName="VehicalQRCode" />
+                <ScalarProperty Name="AppAreaLatLong" ColumnName="AppAreaLatLong" />
+                <ScalarProperty Name="IsAreaActive" ColumnName="IsAreaActive" />
+                <ScalarProperty Name="Today_HouseScanCount" ColumnName="Today_HouseScanCount" />
+                <ScalarProperty Name="Today_LiquidScanCount" ColumnName="Today_LiquidScanCount" />
+                <ScalarProperty Name="Today_StreetScanCount" ColumnName="Today_StreetScanCount" />
+                <ScalarProperty Name="Total_HouseCount" ColumnName="Total_HouseCount" />
+                <ScalarProperty Name="Total_LiquidCount" ColumnName="Total_LiquidCount" />
+                <ScalarProperty Name="Total_StreetCount" ColumnName="Total_StreetCount" />
+                <ScalarProperty Name="Today_DumpScanCount" ColumnName="Today_DumpScanCount" />
+                <ScalarProperty Name="Total_DumpCount" ColumnName="Total_DumpCount" />
+                <ScalarProperty Name="AppLink" ColumnName="AppLink" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

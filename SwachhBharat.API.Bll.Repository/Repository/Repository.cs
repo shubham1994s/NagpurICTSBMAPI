@@ -13341,7 +13341,8 @@ namespace SwachhBharat.API.Bll.Repository.Repository
             Qr_Location loc = new Qr_Location();
             using (DevSwachhBharatNagpurEntities db = new DevSwachhBharatNagpurEntities(AppId))
             {
-                var locc = dbMain.SP_UserLatLongDetailMain(obj.userId, 0).FirstOrDefault();
+                DevSwachhBharatMainEntities dbMain2 = new DevSwachhBharatMainEntities();
+                var locc = dbMain2.SP_UserLatLongDetailMain(obj.userId, 0).FirstOrDefault();
 
                 if (locc == null || locc.lat == "" || locc.@long == "")
                 {
