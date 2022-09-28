@@ -8750,7 +8750,7 @@ namespace SwachhBharat.API.Bll.Repository.Repository
 
                 }
 
-                DevSwachhBharatMainEntities dbMain2 = new DevSwachhBharatMainEntities();
+                
                 dbMain2.SaveChanges();
 
             }
@@ -12861,7 +12861,10 @@ namespace SwachhBharat.API.Bll.Repository.Repository
         public Result SaveQrHPDCollections(BigVQRHPDVM obj, int AppId, string referanceid, int gcType)
         {
             Result result = new Result();
-            var appdetails = dbMain.AppDetails.Where(c => c.AppId == AppId).FirstOrDefault();
+            DevSwachhBharatMainEntities dbMain2 = new DevSwachhBharatMainEntities();
+            var appdetails = dbMain2.AppDetails.Where(c => c.AppId == AppId).FirstOrDefault();
+
+           // var appdetails = dbMain.AppDetails.Where(c => c.AppId == AppId).FirstOrDefault();
             //using (new TransactionScope(
             //       TransactionScopeOption.Required,
             //       new TransactionOptions
@@ -13317,9 +13320,9 @@ namespace SwachhBharat.API.Bll.Repository.Repository
                 if (appdetails != null)
                 {
                     appdetails.FAQ = "1";
-                    dbMain.SaveChanges();
+                    dbMain2.SaveChanges();
                 }
-                 List<AppDetail> AppDetailss = dbMain.Database.SqlQuery<AppDetail>("exec [Update_Trigger]").ToList();
+                 List<AppDetail> AppDetailss = dbMain2.Database.SqlQuery<AppDetail>("exec [Update_Trigger]").ToList();
             }
         }
 
