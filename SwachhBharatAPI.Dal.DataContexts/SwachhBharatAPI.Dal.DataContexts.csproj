@@ -58,19 +58,43 @@
     <Compile Include="AdminContact.cs">
       <DependentUpon>MainSwachhBharat.tt</DependentUpon>
     </Compile>
+    <Compile Include="AD_USER_MST_LIQUID.cs">
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AD_USER_MST_SA.cs">
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AD_USER_MST_STREET.cs">
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AEmployeeMaster.cs">
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
+    </Compile>
     <Compile Include="AppConnection.cs">
       <DependentUpon>MainSwachhBharat.tt</DependentUpon>
     </Compile>
     <Compile Include="AppDetail.cs">
       <DependentUpon>MainSwachhBharat.tt</DependentUpon>
     </Compile>
+    <Compile Include="AspNetRole.cs">
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
+    </Compile>
     <Compile Include="AspNetUser.cs">
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaim.cs">
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogin.cs">
       <DependentUpon>MainSwachhBharat.tt</DependentUpon>
     </Compile>
     <Compile Include="BinLatLong.cs">
       <DependentUpon>ChildSwachhBharat.tt</DependentUpon>
     </Compile>
     <Compile Include="BinMaster.cs">
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheckAppD.cs">
       <DependentUpon>MainSwachhBharat.tt</DependentUpon>
     </Compile>
     <Compile Include="ChildSwachhBharat.Context.cs">
@@ -119,6 +143,9 @@
     <Compile Include="EmployeeMaster.cs">
       <DependentUpon>MainSwachhBharat.tt</DependentUpon>
     </Compile>
+    <Compile Include="Feedback_playstore.cs">
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
+    </Compile>
     <Compile Include="GameDetail.cs">
       <DependentUpon>MainSwachhBharat.tt</DependentUpon>
     </Compile>
@@ -126,7 +153,7 @@
       <DependentUpon>MainSwachhBharat.tt</DependentUpon>
     </Compile>
     <Compile Include="GamePlayerDetail.cs">
-      <DependentUpon>ChildSwachhBharat.tt</DependentUpon>
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
     </Compile>
     <Compile Include="Game_AnswerType.cs">
       <DependentUpon>MainSwachhBharat.tt</DependentUpon>
@@ -185,6 +212,9 @@
     <Compile Include="HSUR_Daily_Attendance.cs">
       <DependentUpon>MainSwachhBharat.tt</DependentUpon>
     </Compile>
+    <Compile Include="LanguageInfo.cs">
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
+    </Compile>
     <Compile Include="LiquidWasteDetail.cs">
       <DependentUpon>ChildSwachhBharat.tt</DependentUpon>
     </Compile>
@@ -225,6 +255,9 @@
     <Compile Include="SauchalayAddress.cs">
       <DependentUpon>ChildSwachhBharat.tt</DependentUpon>
     </Compile>
+    <Compile Include="Sauchalay_feedback.cs">
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
+    </Compile>
     <Compile Include="sp_area_Result.cs">
       <DependentUpon>ChildSwachhBharat.tt</DependentUpon>
     </Compile>
@@ -232,7 +265,7 @@
       <DependentUpon>ChildSwachhBharat.tt</DependentUpon>
     </Compile>
     <Compile Include="SP_DistanceCount_Result.cs">
-      <DependentUpon>ChildSwachhBharat.tt</DependentUpon>
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
     </Compile>
     <Compile Include="SP_DumpYardDetailsApp_Result.cs">
       <DependentUpon>ChildSwachhBharat.tt</DependentUpon>
@@ -286,7 +319,7 @@
       <DependentUpon>MainSwachhBharat.tt</DependentUpon>
     </Compile>
     <Compile Include="SP_UserLatLongDetail_Result.cs">
-      <DependentUpon>ChildSwachhBharat.tt</DependentUpon>
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
     </Compile>
     <Compile Include="state_districts.cs">
       <DependentUpon>MainSwachhBharat.tt</DependentUpon>
@@ -296,6 +329,9 @@
     </Compile>
     <Compile Include="StreetSweepingDetail.cs">
       <DependentUpon>ChildSwachhBharat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription.cs">
+      <DependentUpon>MainSwachhBharat.tt</DependentUpon>
     </Compile>
     <Compile Include="SwachhBharatAppConnection.cs" />
     <Compile Include="tehsil.cs">

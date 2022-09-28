@@ -3837,8 +3837,8 @@ namespace SwachhBharat.API.Bll.Repository.Repository
                                 {
                                     ID = x.OfflineID,
                                     status = "success",
-                                    message = "Shift started Successfully",
-                                    messageMar = "शिफ्ट सुरू",
+                                    message = "Shift Ended Successfully",
+                                    messageMar = "शिफ्ट संपले",
                                     IsInSync = _IsInSync,
                                     IsOutSync = _IsOutSync,
                                     EmpType = "N",
@@ -8746,7 +8746,9 @@ namespace SwachhBharat.API.Bll.Repository.Repository
 
 
                 }
-                dbMain.SaveChanges();
+
+                DevSwachhBharatMainEntities dbMain2 = new DevSwachhBharatMainEntities();
+                dbMain2.SaveChanges();
 
             }
 
@@ -9566,6 +9568,7 @@ namespace SwachhBharat.API.Bll.Repository.Repository
                     result.status = "false";
                     result.message = "";
                     result.messageMar = "";
+                    result.applink = "";
                     return result;
                 }
                 else
@@ -9573,6 +9576,7 @@ namespace SwachhBharat.API.Bll.Repository.Repository
                     result.status = "true";
                     result.message = "";
                     result.messageMar = "";
+                    result.applink = appdetails.AppLink;
                     return result;
                 }
             }
@@ -9583,6 +9587,7 @@ namespace SwachhBharat.API.Bll.Repository.Repository
                 result.status = "false";
                 result.message = "";
                 result.messageMar = "";
+                result.applink = "";
                 return result;
             }
 
