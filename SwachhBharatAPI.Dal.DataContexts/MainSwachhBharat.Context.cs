@@ -86,19 +86,6 @@ namespace SwachhBharatAPI.Dal.DataContexts
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_DistanceCount_Result>("SP_DistanceCount", sLatParameter, sLongParameter, dLatParameter, dLongParameter);
         }
     
-        public virtual ObjectResult<SP_UserLatLongDetail_Result> SP_UserLatLongDetail(Nullable<int> userid, Nullable<int> typeId)
-        {
-            var useridParameter = userid.HasValue ?
-                new ObjectParameter("userid", userid) :
-                new ObjectParameter("userid", typeof(int));
-    
-            var typeIdParameter = typeId.HasValue ?
-                new ObjectParameter("typeId", typeId) :
-                new ObjectParameter("typeId", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_UserLatLongDetail_Result>("SP_UserLatLongDetail", useridParameter, typeIdParameter);
-        }
-    
         public virtual ObjectResult<Nullable<int>> DailyScanCount(string ulbappid)
         {
             var ulbappidParameter = ulbappid != null ?
@@ -106,19 +93,6 @@ namespace SwachhBharatAPI.Dal.DataContexts
                 new ObjectParameter("Ulbappid", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("DailyScanCount", ulbappidParameter);
-        }
-    
-        public virtual ObjectResult<SP_UserLatLongDetailMain_Result> SP_UserLatLongDetailMain(Nullable<int> userid, Nullable<int> typeId)
-        {
-            var useridParameter = userid.HasValue ?
-                new ObjectParameter("userid", userid) :
-                new ObjectParameter("userid", typeof(int));
-    
-            var typeIdParameter = typeId.HasValue ?
-                new ObjectParameter("typeId", typeId) :
-                new ObjectParameter("typeId", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_UserLatLongDetailMain_Result>("SP_UserLatLongDetailMain", useridParameter, typeIdParameter);
         }
     
         public virtual int All_Schedule()
@@ -186,31 +160,6 @@ namespace SwachhBharatAPI.Dal.DataContexts
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_SSRS_GarbageCollection", appIdParameter, fdateParameter, tdateParameter, userIdParameter, garbageTypeParameter);
         }
     
-        public virtual int SP_SSRS_GarbageCollection1(Nullable<int> appId, Nullable<System.DateTime> fdate, Nullable<System.DateTime> tdate, Nullable<int> userId, Nullable<int> garbageType)
-        {
-            var appIdParameter = appId.HasValue ?
-                new ObjectParameter("appId", appId) :
-                new ObjectParameter("appId", typeof(int));
-    
-            var fdateParameter = fdate.HasValue ?
-                new ObjectParameter("fdate", fdate) :
-                new ObjectParameter("fdate", typeof(System.DateTime));
-    
-            var tdateParameter = tdate.HasValue ?
-                new ObjectParameter("tdate", tdate) :
-                new ObjectParameter("tdate", typeof(System.DateTime));
-    
-            var userIdParameter = userId.HasValue ?
-                new ObjectParameter("userId", userId) :
-                new ObjectParameter("userId", typeof(int));
-    
-            var garbageTypeParameter = garbageType.HasValue ?
-                new ObjectParameter("garbageType", garbageType) :
-                new ObjectParameter("garbageType", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_SSRS_GarbageCollection1", appIdParameter, fdateParameter, tdateParameter, userIdParameter, garbageTypeParameter);
-        }
-    
         public virtual ObjectResult<SP_ULBADMIN_Result> SP_ULBADMIN(Nullable<int> divisionIdIn, Nullable<int> districtIdIn, Nullable<int> appIdIN, Nullable<int> userId)
         {
             var divisionIdInParameter = divisionIdIn.HasValue ?
@@ -274,14 +223,30 @@ namespace SwachhBharatAPI.Dal.DataContexts
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_ULBADMINSTATUS_Result>("SP_ULBADMINSTATUS", divisionIdInParameter, districtIdInParameter, appIdINParameter, userIdParameter);
         }
     
-        public virtual int spNewProcedure1()
+        public virtual ObjectResult<SP_UserLatLongDetail_Result> SP_UserLatLongDetail(Nullable<int> userid, Nullable<int> typeId)
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spNewProcedure1");
+            var useridParameter = userid.HasValue ?
+                new ObjectParameter("userid", userid) :
+                new ObjectParameter("userid", typeof(int));
+    
+            var typeIdParameter = typeId.HasValue ?
+                new ObjectParameter("typeId", typeId) :
+                new ObjectParameter("typeId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_UserLatLongDetail_Result>("SP_UserLatLongDetail", useridParameter, typeIdParameter);
         }
     
-        public virtual int Update_Trigger1()
+        public virtual ObjectResult<SP_UserLatLongDetailMain_Result> SP_UserLatLongDetailMain(Nullable<int> userid, Nullable<int> typeId)
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Update_Trigger1");
+            var useridParameter = userid.HasValue ?
+                new ObjectParameter("userid", userid) :
+                new ObjectParameter("userid", typeof(int));
+    
+            var typeIdParameter = typeId.HasValue ?
+                new ObjectParameter("typeId", typeId) :
+                new ObjectParameter("typeId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_UserLatLongDetailMain_Result>("SP_UserLatLongDetailMain", useridParameter, typeIdParameter);
         }
     }
 }

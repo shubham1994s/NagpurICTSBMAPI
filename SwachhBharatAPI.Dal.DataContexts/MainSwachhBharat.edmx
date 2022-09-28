@@ -682,16 +682,8 @@ warning 6002: The table/view 'LIVEAdvanceDevSwachhBharatMain.dbo.CheckAppD' does
             <Parameter Name="dLat" Mode="In" Type="Double" />
             <Parameter Name="dLong" Mode="In" Type="Double" />
           </FunctionImport>
-          <FunctionImport Name="SP_UserLatLongDetail" ReturnType="Collection(DevSwachhBharatMainModel.SP_UserLatLongDetail_Result)">
-            <Parameter Name="userid" Mode="In" Type="Int32" />
-            <Parameter Name="typeId" Mode="In" Type="Int32" />
-          </FunctionImport>
           <FunctionImport Name="DailyScanCount" ReturnType="Collection(Int32)">
           <Parameter Name="Ulbappid" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="SP_UserLatLongDetailMain" ReturnType="Collection(DevSwachhBharatMainModel.SP_UserLatLongDetailMain_Result)">
-            <Parameter Name="userid" Mode="In" Type="Int32" />
-            <Parameter Name="typeId" Mode="In" Type="Int32" />
           </FunctionImport>
           <EntitySet Name="AD_USER_MST_LIQUID" EntityType="DevSwachhBharatMainModel.AD_USER_MST_LIQUID" />
           <EntitySet Name="AD_USER_MST_SA" EntityType="DevSwachhBharatMainModel.AD_USER_MST_SA" />
@@ -752,13 +744,6 @@ warning 6002: The table/view 'LIVEAdvanceDevSwachhBharatMain.dbo.CheckAppD' does
             <Parameter Name="userId" Mode="In" Type="Int32" />
             <Parameter Name="garbageType" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="SP_SSRS_GarbageCollection1">
-            <Parameter Name="appId" Mode="In" Type="Int32" />
-            <Parameter Name="fdate" Mode="In" Type="DateTime" />
-            <Parameter Name="tdate" Mode="In" Type="DateTime" />
-            <Parameter Name="userId" Mode="In" Type="Int32" />
-            <Parameter Name="garbageType" Mode="In" Type="Int32" />
-          </FunctionImport>
           <FunctionImport Name="SP_ULBADMIN" ReturnType="Collection(DevSwachhBharatMainModel.SP_ULBADMIN_Result)">
             <Parameter Name="DivisionIdIn" Mode="In" Type="Int32" />
             <Parameter Name="DistrictIdIn" Mode="In" Type="Int32" />
@@ -777,8 +762,14 @@ warning 6002: The table/view 'LIVEAdvanceDevSwachhBharatMain.dbo.CheckAppD' does
             <Parameter Name="AppIdIN" Mode="In" Type="Int32" />
             <Parameter Name="UserId" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="spNewProcedure1" />
-          <FunctionImport Name="Update_Trigger1" />
+          <FunctionImport Name="SP_UserLatLongDetail" ReturnType="Collection(DevSwachhBharatMainModel.SP_UserLatLongDetail_Result)">
+            <Parameter Name="userid" Mode="In" Type="Int32" />
+            <Parameter Name="typeId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_UserLatLongDetailMain" ReturnType="Collection(DevSwachhBharatMainModel.SP_UserLatLongDetailMain_Result)">
+            <Parameter Name="userid" Mode="In" Type="Int32" />
+            <Parameter Name="typeId" Mode="In" Type="Int32" />
+          </FunctionImport>
           </EntityContainer>
         <ComplexType Name="Update_Trigger_Result">
           <Property Type="Int32" Name="AppId" Nullable="false" />
@@ -847,30 +838,6 @@ warning 6002: The table/view 'LIVEAdvanceDevSwachhBharatMain.dbo.CheckAppD' does
         <ComplexType Name="SP_DistanceCount_Result">
           <Property Type="Decimal" Name="Distance_in_KM" Nullable="true" Precision="10" Scale="4" />
           <Property Type="Decimal" Name="Distance_in_meters" Nullable="true" Precision="10" Scale="4" />
-        </ComplexType>
-        <ComplexType Name="SP_UserLatLongDetail_Result">
-          <Property Type="Int32" Name="locId" Nullable="false" />
-          <Property Type="Int32" Name="empId" Nullable="true" />
-          <Property Type="DateTime" Name="datetime" Nullable="true" Precision="23" />
-          <Property Type="String" Name="lat" Nullable="true" MaxLength="500" />
-          <Property Type="String" Name="long" Nullable="true" MaxLength="500" />
-          <Property Type="String" Name="address" Nullable="true" />
-          <Property Type="String" Name="area" Nullable="true" MaxLength="500" />
-          <Property Type="Int32" Name="type" Nullable="true" />
-          <Property Type="String" Name="batteryStatus" Nullable="true" MaxLength="20" />
-          <Property Type="Decimal" Name="Distnace" Nullable="true" Precision="6" Scale="2" />
-        </ComplexType>
-        <ComplexType Name="SP_UserLatLongDetailMain_Result">
-          <Property Type="Int32" Name="locId" Nullable="false" />
-          <Property Type="Int32" Name="empId" Nullable="true" />
-          <Property Type="DateTime" Name="datetime" Nullable="true" Precision="23" />
-          <Property Type="String" Name="lat" Nullable="true" MaxLength="500" />
-          <Property Type="String" Name="long" Nullable="true" MaxLength="500" />
-          <Property Type="String" Name="address" Nullable="true" />
-          <Property Type="String" Name="area" Nullable="true" MaxLength="500" />
-          <Property Type="Int32" Name="type" Nullable="true" />
-          <Property Type="String" Name="batteryStatus" Nullable="true" MaxLength="20" />
-          <Property Type="Decimal" Name="Distnace" Nullable="true" Precision="6" Scale="2" />
         </ComplexType>
         <EntityType Name="AD_USER_MST_LIQUID">
           <Key>
@@ -1425,6 +1392,30 @@ warning 6002: The table/view 'LIVEAdvanceDevSwachhBharatMain.dbo.CheckAppD' does
           <Property Type="String" Name="appName" Nullable="true" MaxLength="100" />
           <Property Type="Boolean" Name="Status" Nullable="true" />
         </ComplexType>
+        <ComplexType Name="SP_UserLatLongDetail_Result">
+          <Property Type="Int32" Name="locId" Nullable="false" />
+          <Property Type="Int32" Name="empId" Nullable="true" />
+          <Property Type="DateTime" Name="datetime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="lat" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="long" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="address" Nullable="true" />
+          <Property Type="String" Name="area" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="type" Nullable="true" />
+          <Property Type="String" Name="batteryStatus" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Distnace" Nullable="true" Precision="6" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="SP_UserLatLongDetailMain_Result">
+          <Property Type="Int32" Name="locId" Nullable="false" />
+          <Property Type="Int32" Name="empId" Nullable="true" />
+          <Property Type="DateTime" Name="datetime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="lat" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="long" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="address" Nullable="true" />
+          <Property Type="String" Name="area" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="type" Nullable="true" />
+          <Property Type="String" Name="batteryStatus" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Distnace" Nullable="true" Precision="6" Scale="2" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1958,7 +1949,6 @@ warning 6002: The table/view 'LIVEAdvanceDevSwachhBharatMain.dbo.CheckAppD' does
           <FunctionImportMapping FunctionImportName="SP_Admin5" FunctionName="DevSwachhBharatMainModel.Store.SP_Admin5" />
           <FunctionImportMapping FunctionImportName="sp_area" FunctionName="DevSwachhBharatMainModel.Store.sp_area" />
           <FunctionImportMapping FunctionImportName="SP_SSRS_GarbageCollection" FunctionName="DevSwachhBharatMainModel.Store.SP_SSRS_GarbageCollection" />
-          <FunctionImportMapping FunctionImportName="SP_SSRS_GarbageCollection1" FunctionName="DevSwachhBharatMainModel.Store.SP_SSRS_GarbageCollection1" />
           <FunctionImportMapping FunctionImportName="SP_ULBADMIN" FunctionName="DevSwachhBharatMainModel.Store.SP_ULBADMIN">
             <ResultMapping>
               <ComplexTypeMapping TypeName="DevSwachhBharatMainModel.SP_ULBADMIN_Result">
@@ -2005,8 +1995,37 @@ warning 6002: The table/view 'LIVEAdvanceDevSwachhBharatMain.dbo.CheckAppD' does
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="spNewProcedure1" FunctionName="DevSwachhBharatMainModel.Store.spNewProcedure1" />
-          <FunctionImportMapping FunctionImportName="Update_Trigger1" FunctionName="DevSwachhBharatMainModel.Store.Update_Trigger">
+          <FunctionImportMapping FunctionImportName="SP_UserLatLongDetail" FunctionName="DevSwachhBharatMainModel.Store.SP_UserLatLongDetail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DevSwachhBharatMainModel.SP_UserLatLongDetail_Result">
+                <ScalarProperty Name="locId" ColumnName="locId" />
+                <ScalarProperty Name="empId" ColumnName="empId" />
+                <ScalarProperty Name="datetime" ColumnName="datetime" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="long" ColumnName="long" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="area" ColumnName="area" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="batteryStatus" ColumnName="batteryStatus" />
+                <ScalarProperty Name="Distnace" ColumnName="Distnace" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_UserLatLongDetailMain" FunctionName="DevSwachhBharatMainModel.Store.SP_UserLatLongDetailMain">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DevSwachhBharatMainModel.SP_UserLatLongDetailMain_Result">
+                <ScalarProperty Name="locId" ColumnName="locId" />
+                <ScalarProperty Name="empId" ColumnName="empId" />
+                <ScalarProperty Name="datetime" ColumnName="datetime" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="long" ColumnName="long" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="area" ColumnName="area" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="batteryStatus" ColumnName="batteryStatus" />
+                <ScalarProperty Name="Distnace" ColumnName="Distnace" />
+              </ComplexTypeMapping>
+            </ResultMapping>
           </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
