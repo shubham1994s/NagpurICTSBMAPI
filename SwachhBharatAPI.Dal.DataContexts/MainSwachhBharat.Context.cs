@@ -131,15 +131,6 @@ namespace SwachhBharatAPI.Dal.DataContexts
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("All_SP_GetEmpWiseHouseScan");
         }
     
-        public virtual ObjectResult<Nullable<int>> DailyScanCount1(string ulbappid)
-        {
-            var ulbappidParameter = ulbappid != null ?
-                new ObjectParameter("Ulbappid", ulbappid) :
-                new ObjectParameter("Ulbappid", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("DailyScanCount1", ulbappidParameter);
-        }
-    
         public virtual int HouseEntryCount()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("HouseEntryCount");
@@ -168,27 +159,6 @@ namespace SwachhBharatAPI.Dal.DataContexts
         public virtual int sp_area()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_area");
-        }
-    
-        public virtual ObjectResult<SP_DistanceCount1_Result> SP_DistanceCount1(Nullable<double> sLat, Nullable<double> sLong, Nullable<double> dLat, Nullable<double> dLong)
-        {
-            var sLatParameter = sLat.HasValue ?
-                new ObjectParameter("sLat", sLat) :
-                new ObjectParameter("sLat", typeof(double));
-    
-            var sLongParameter = sLong.HasValue ?
-                new ObjectParameter("sLong", sLong) :
-                new ObjectParameter("sLong", typeof(double));
-    
-            var dLatParameter = dLat.HasValue ?
-                new ObjectParameter("dLat", dLat) :
-                new ObjectParameter("dLat", typeof(double));
-    
-            var dLongParameter = dLong.HasValue ?
-                new ObjectParameter("dLong", dLong) :
-                new ObjectParameter("dLong", typeof(double));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_DistanceCount1_Result>("SP_DistanceCount1", sLatParameter, sLongParameter, dLatParameter, dLongParameter);
         }
     
         public virtual int SP_SSRS_GarbageCollection(Nullable<int> appId, Nullable<System.DateTime> fdate, Nullable<System.DateTime> tdate, Nullable<int> userId, Nullable<int> garbageType)
@@ -304,40 +274,14 @@ namespace SwachhBharatAPI.Dal.DataContexts
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_ULBADMINSTATUS_Result>("SP_ULBADMINSTATUS", divisionIdInParameter, districtIdInParameter, appIdINParameter, userIdParameter);
         }
     
-        public virtual ObjectResult<SP_UserLatLongDetail1_Result> SP_UserLatLongDetail1(Nullable<int> userid, Nullable<int> typeId)
-        {
-            var useridParameter = userid.HasValue ?
-                new ObjectParameter("userid", userid) :
-                new ObjectParameter("userid", typeof(int));
-    
-            var typeIdParameter = typeId.HasValue ?
-                new ObjectParameter("typeId", typeId) :
-                new ObjectParameter("typeId", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_UserLatLongDetail1_Result>("SP_UserLatLongDetail1", useridParameter, typeIdParameter);
-        }
-    
-        public virtual ObjectResult<SP_UserLatLongDetailMain1_Result> SP_UserLatLongDetailMain1(Nullable<int> userid, Nullable<int> typeId)
-        {
-            var useridParameter = userid.HasValue ?
-                new ObjectParameter("userid", userid) :
-                new ObjectParameter("userid", typeof(int));
-    
-            var typeIdParameter = typeId.HasValue ?
-                new ObjectParameter("typeId", typeId) :
-                new ObjectParameter("typeId", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_UserLatLongDetailMain1_Result>("SP_UserLatLongDetailMain1", useridParameter, typeIdParameter);
-        }
-    
         public virtual int spNewProcedure1()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spNewProcedure1");
         }
     
-        public virtual ObjectResult<Update_Trigger1_Result> Update_Trigger1()
+        public virtual int Update_Trigger1()
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Update_Trigger1_Result>("Update_Trigger1");
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Update_Trigger1");
         }
     }
 }
