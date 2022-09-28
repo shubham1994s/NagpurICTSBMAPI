@@ -13370,7 +13370,8 @@ namespace SwachhBharat.API.Bll.Repository.Repository
         public List<CollectionSyncResult> SaveQrHPDCollectionsOffline(List<BigVQRHPDVM> obj, int AppId)
         {
             List<CollectionSyncResult> result = new List<CollectionSyncResult>();
-            var appdetails = dbMain.AppDetails.Where(c => c.AppId == AppId).FirstOrDefault();
+            DevSwachhBharatMainEntities dbMain2 = new DevSwachhBharatMainEntities();
+            var appdetails = dbMain2.AppDetails.Where(c => c.AppId == AppId).FirstOrDefault();
 
             using (DevSwachhBharatNagpurEntities db = new DevSwachhBharatNagpurEntities(AppId))
             {
