@@ -6359,7 +6359,8 @@ namespace SwachhBharat.API.Bll.Repository.Repository
                             try
                             {
                                 // Update code
-                                var updateappdetails = dbMain.DailyScanCount(AppId.ToString());
+                                //DevSwachhBharatMainEntities dbMain2 = new DevSwachhBharatMainEntities();
+                               // var updateappdetails = dbMain2.DailyScanCount(AppId.ToString());
 
                             }
                             catch(Exception ex)
