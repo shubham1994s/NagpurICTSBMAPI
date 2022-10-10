@@ -13303,6 +13303,16 @@ namespace SwachhBharat.API.Bll.Repository.Repository
                         result.status = "error";
                         return result;
                     }
+
+                    if (result.status == "success")
+                    {
+                        if (appdetails != null)
+                        {
+                            appdetails.FAQ = "1";
+                            dbMain2.SaveChanges();
+                        }
+                        List<AppDetail> AppDetailss = dbMain2.Database.SqlQuery<AppDetail>("exec [Update_Trigger]").ToList();
+                    }
                     return result;
                 }
                 catch (Exception ex)
@@ -13316,15 +13326,7 @@ namespace SwachhBharat.API.Bll.Repository.Repository
             }
             //}
 
-            if (result.status == "success")
-            {
-                if (appdetails != null)
-                {
-                    appdetails.FAQ = "1";
-                    dbMain2.SaveChanges();
-                }
-                 List<AppDetail> AppDetailss = dbMain2.Database.SqlQuery<AppDetail>("exec [Update_Trigger]").ToList();
-            }
+          
         }
 
         /// <summary>
