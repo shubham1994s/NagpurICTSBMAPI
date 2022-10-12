@@ -2185,7 +2185,7 @@ namespace SwachhBharat.API.Bll.Repository.Repository
                     }
                     return result;
                 }
-                catch
+                catch (Exception ex)
                 {
                     throw;
                     List<SyncResult> objres = new List<SyncResult>();

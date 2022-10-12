@@ -17,9 +17,8 @@ namespace SwachhBharatAPI.Dal.DataContexts
     
     public partial class DevSwachhBharatNagpurEntities : DbContext
     {
-
         public DevSwachhBharatNagpurEntities(int AppId)
-                     : base(SwachhBharatAppConnection.GetConnectionString(AppId))
+              : base(SwachhBharatAppConnection.GetConnectionString(AppId))
         {
         }
 
@@ -553,6 +552,15 @@ namespace SwachhBharatAPI.Dal.DataContexts
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetAttendenceDetailsTotalDump_Result>("GetAttendenceDetailsTotalDump", userIdParameter, yearParameter, monthParameter);
         }
     
+        public virtual ObjectResult<VehicleList_TypeWise_Result> VehicleList_TypeWise(Nullable<int> vehicleType)
+        {
+            var vehicleTypeParameter = vehicleType.HasValue ?
+                new ObjectParameter("VehicleType", vehicleType) :
+                new ObjectParameter("VehicleType", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<VehicleList_TypeWise_Result>("VehicleList_TypeWise", vehicleTypeParameter);
+        }
+    
         public virtual ObjectResult<SP_UserLatLongDetail_Result> SP_UserLatLongDetail(Nullable<int> userid, Nullable<int> typeId)
         {
             var useridParameter = userid.HasValue ?
@@ -564,15 +572,6 @@ namespace SwachhBharatAPI.Dal.DataContexts
                 new ObjectParameter("typeId", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_UserLatLongDetail_Result>("SP_UserLatLongDetail", useridParameter, typeIdParameter);
-        }
-    
-        public virtual ObjectResult<VehicleList_TypeWise_Result> VehicleList_TypeWise(Nullable<int> vehicleType)
-        {
-            var vehicleTypeParameter = vehicleType.HasValue ?
-                new ObjectParameter("VehicleType", vehicleType) :
-                new ObjectParameter("VehicleType", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<VehicleList_TypeWise_Result>("VehicleList_TypeWise", vehicleTypeParameter);
         }
     }
 }

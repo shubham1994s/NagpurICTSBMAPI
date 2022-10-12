@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\Roshan\Project\Updated Projects\ICTSBM\ICTSBMAPI\ICTSBMAPI\SwachhBharatAPI.Dal.DataContexts\ChildSwachhBharat.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Roshan\Project\Updated Projects\Nagpur Newly Updated\New Nagpur API\New Update API Nagpur\New Update API Nagpur\ICTSBMAPI\SwachhBharatAPI.Dal.DataContexts\ChildSwachhBharat.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
