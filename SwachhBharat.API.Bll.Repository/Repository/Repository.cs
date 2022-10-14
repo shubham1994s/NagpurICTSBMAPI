@@ -2357,6 +2357,26 @@ namespace SwachhBharat.API.Bll.Repository.Repository
         public Result SaveUserAttendence(SBUserAttendence obj, int AppId, int type, string batteryStatus)
         {
             Result result = new Result();
+
+            if ((string.IsNullOrEmpty(obj.startLat)) == true && (string.IsNullOrEmpty(obj.startLong)) == true && type == 0)
+            {
+                result.status = "error";
+                result.message = "Your start Lat / Long are Empty ";
+                result.messageMar = "तुमची सुरुवात लॅट / लॉन्ग  रिक्त आहेत";
+                result.emptype = obj.EmpType;
+                return result;
+            }
+
+            if ((string.IsNullOrEmpty(obj.endLat)) == true && (string.IsNullOrEmpty(obj.endLong)) == true && type == 1)
+            {
+                result.status = "error";
+                result.message = "Your End Lat / Long are Empty ";
+                result.messageMar = "तुमचा शेवट लॅट / लॉन्ग रिक्त आहेत";
+                result.emptype = obj.EmpType;
+                return result;
+            }
+
+
             if (obj.EmpType == "N")
             {
                 result = SaveUserAttendenceForNormal(obj, AppId, type, batteryStatus);
