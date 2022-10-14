@@ -2374,13 +2374,32 @@ namespace SwachhBharat.API.Bll.Repository.Repository
         public Result SaveUserAttendenceForNormal(SBUserAttendence obj, int AppId, int type, string batteryStatus)
         {
             Result result = new Result();
+            if ((string.IsNullOrEmpty(obj.startLat)) == true && (string.IsNullOrEmpty(obj.startLong)) == true && type==0)
+            {
+                result.status = "error";
+                result.message = "Your start Lat / Long are Empty ";
+                result.messageMar = "तुमची सुरुवात लॅट / लॉन्ग  रिक्त आहेत";
+                result.emptype = "N";
+                return result;
+            }
+
+            if ((string.IsNullOrEmpty(obj.endLat)) == true && (string.IsNullOrEmpty(obj.endLong)) == true && type == 1)
+            {
+                result.status = "error";
+                result.message = "Your End Lat / Long are Empty ";
+                result.messageMar = "तुमचा शेवट लॅट / लॉन्ग रिक्त आहेत";
+                result.emptype = "N";
+                return result;
+            }
             using (DevSwachhBharatNagpurEntities db = new DevSwachhBharatNagpurEntities(AppId))
             {
                 var user = db.UserMasters.Where(c => c.userId == obj.userId && c.EmployeeType == null).FirstOrDefault();
                 var Vehicaldetail = db.Vehical_QR_Master.Where(c => c.ReferanceId == obj.ReferanceId && c.VehicalNumber != null && c.VehicalType != null).FirstOrDefault();
                 if (type == 0)
                 {
-                    if (user.isActive == true)
+                   
+
+                   if (user.isActive == true)
                     {
                         //Daily_Attendance data = db.Daily_Attendance.Where(c => c.daDate == EntityFunctions.TruncateTime(obj.daDate) && c.userId == obj.userId && (c.endTime == null || c.endTime == "")).FirstOrDefault();
                         Daily_Attendance data = db.Daily_Attendance.Where(c => c.userId == obj.userId && (c.endTime == null || c.endTime == "") && c.EmployeeType == null).FirstOrDefault();
@@ -2635,6 +2654,24 @@ namespace SwachhBharat.API.Bll.Repository.Repository
         public Result SaveUserAttendenceForLiquid(SBUserAttendence obj, int AppId, int type, string batteryStatus)
         {
             Result result = new Result();
+            if ((string.IsNullOrEmpty(obj.startLat)) == true && (string.IsNullOrEmpty(obj.startLong)) == true && type == 0)
+            {
+                result.status = "error";
+                result.message = "Your start Lat / Long are Empty ";
+                result.messageMar = "तुमची सुरुवात लॅट / लॉन्ग  रिक्त आहेत";
+                result.emptype = "L";
+                return result;
+            }
+
+            if ((string.IsNullOrEmpty(obj.endLat)) == true && (string.IsNullOrEmpty(obj.endLong)) == true && type == 1)
+            {
+                result.status = "error";
+                result.message = "Your End Lat / Long are Empty ";
+                result.messageMar = "तुमचा शेवट लॅट / लॉन्ग रिक्त आहेत";
+                result.emptype = "L";
+                return result;
+            }
+
             using (DevSwachhBharatNagpurEntities db = new DevSwachhBharatNagpurEntities(AppId))
             {
                 var user = db.UserMasters.Where(c => c.userId == obj.userId && c.EmployeeType == "L").FirstOrDefault();
@@ -2825,6 +2862,24 @@ namespace SwachhBharat.API.Bll.Repository.Repository
         public Result SaveUserAttendenceForStreet(SBUserAttendence obj, int AppId, int type, string batteryStatus)
         {
             Result result = new Result();
+
+            if ((string.IsNullOrEmpty(obj.startLat)) == true && (string.IsNullOrEmpty(obj.startLong)) == true && type == 0)
+            {
+                result.status = "error";
+                result.message = "Your start Lat / Long are Empty ";
+                result.messageMar = "तुमची सुरुवात लॅट / लॉन्ग  रिक्त आहेत";
+                result.emptype = "S";
+                return result;
+            }
+
+            if ((string.IsNullOrEmpty(obj.endLat)) == true && (string.IsNullOrEmpty(obj.endLong)) == true && type == 1)
+            {
+                result.status = "error";
+                result.message = "Your End Lat / Long are Empty ";
+                result.messageMar = "तुमचा शेवट लॅट / लॉन्ग रिक्त आहेत";
+                result.emptype = "S";
+                return result;
+            }
             using (DevSwachhBharatNagpurEntities db = new DevSwachhBharatNagpurEntities(AppId))
             {
                 var user = db.UserMasters.Where(c => c.userId == obj.userId && c.EmployeeType == "S").FirstOrDefault();
@@ -3015,6 +3070,23 @@ namespace SwachhBharat.API.Bll.Repository.Repository
         public Result SaveUserAttendenceForDump(SBUserAttendence obj, int AppId, int type, string batteryStatus)
         {
             Result result = new Result();
+            if ((string.IsNullOrEmpty(obj.startLat)) == true && (string.IsNullOrEmpty(obj.startLong)) == true && type == 0)
+            {
+                result.status = "error";
+                result.message = "Your start Lat / Long are Empty ";
+                result.messageMar = "तुमची सुरुवात लॅट / लॉन्ग  रिक्त आहेत";
+                result.emptype = "D";
+                return result;
+            }
+
+            if ((string.IsNullOrEmpty(obj.endLat)) == true && (string.IsNullOrEmpty(obj.endLong)) == true && type == 1)
+            {
+                result.status = "error";
+                result.message = "Your End Lat / Long are Empty ";
+                result.messageMar = "तुमचा शेवट लॅट / लॉन्ग रिक्त आहेत";
+                result.emptype = "D";
+                return result;
+            }
             using (DevSwachhBharatNagpurEntities db = new DevSwachhBharatNagpurEntities(AppId))
             {
                 var user = db.UserMasters.Where(c => c.userId == obj.userId && c.EmployeeType == "D").FirstOrDefault();
