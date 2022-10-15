@@ -5958,10 +5958,13 @@ namespace SwachhBharat.API.Bll.Repository.Repository
                 //             IsolationLevel = IsolationLevel.ReadUncommitted
                 //         }))
 
-                using (var scope = db.Database.BeginTransaction(System.Data.IsolationLevel.Serializable))
-                {
+                //using (var scope = db.Database.BeginTransaction(System.Data.IsolationLevel.Serializable))
+                //{
 
-                    string name = "", housemob = "", nameMar = "", addre = "";
+                    using (var scope = db.Database.BeginTransaction())
+                    {
+
+                        string name = "", housemob = "", nameMar = "", addre = "";
                     var house = db.HouseMasters.Where(c => c.ReferanceId == obj.houseId).FirstOrDefault();
                     bool IsExist = false;
                     DateTime Dateeee = Convert.ToDateTime(obj.gcDate);
