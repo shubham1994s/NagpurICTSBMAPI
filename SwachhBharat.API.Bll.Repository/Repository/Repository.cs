@@ -5916,7 +5916,7 @@ namespace SwachhBharat.API.Bll.Repository.Repository
 
                 List<String> ArrayList = new List<String>();
 
-                foreach (var x in FCM)
+                foreach (var x in FCM) 
                 {
                     ArrayList.Add(x.FCMID);
                 }
